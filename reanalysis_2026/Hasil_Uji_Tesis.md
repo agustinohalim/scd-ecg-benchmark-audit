@@ -43,6 +43,18 @@ Satu angka membuktikannya. Regresi logistik atas **simpangan baku sinyal saja**:
 
 (E2 tanpa rekaman 52: jendelanya memuat cuplikan kosong.)
 
+### 1.1 Berlaku untuk semua durasi tesis, bukan hanya 3 menit
+
+Tesis Tabel 4.4 melaporkan jendela 30 detik, 1, 2, 3, 4, 5, dan 10 menit. Notebook yang tersisa
+untuk durasi itu: `Preprocessing-new.ipynb` (30 detik), `Preprocessing-new1.ipynb` (3 menit),
+`Preprocessing.ipynb` (versi awal), `Timeseries - Preprocessing.ipynb` (blok 1 menit). **Semuanya
+mengambil jendela Normal dari akhir rekaman `nsrdb`** (`start = time - m`); tidak satu pun
+mengambil acak seperti tertulis di tesis bab 4.2. Notebook untuk 1, 2, 4, 5, dan 10 menit tidak
+ada, tetapi polanya sama di semua yang tersisa: `m` = milidetik / 4 cuplikan dari akhir.
+Jendela terpanjang, 10 menit, = 150.000 cuplikan = 19,5 menit pada 128 Hz — masih di dalam ekor
+tanpa EKG yang paling pendek (63,8 menit). Jadi setiap jendela Normal tesis, pada semua durasi,
+jatuh di bagian rekaman sesudah elektroda terlepas.
+
 ## 2. Temuan data lain
 
 - **Panjang jendela tidak sama antarkelas.** `m = 45.000` cuplikan = 180 detik pada 250 Hz

@@ -26,12 +26,18 @@ program, checks the data, and re-tests the thesis claims.
 
 ## What the 2022 thesis did
 
-- SCD class: the 3 minutes of `sddb` channel 0 immediately before ventricular fibrillation (VF)
-  onset, 20 records.
-- Normal class: the last 45,000 samples of each `nsrdb` record.
+- SCD class: a window of `sddb` channel 0 ending at ventricular fibrillation (VF) onset, 20
+  records. Window lengths 30 s, 1, 2, 3, 4, 5 and 10 min (thesis Table 4.4), one model per length.
+  Time-series variants used 2–10 consecutive images per record.
+- Normal class: the same number of samples (`m` = milliseconds / 4) counted back from the **end**
+  of each `nsrdb` record. The thesis text (section 4.2) says the Normal window was taken at random;
+  none of the surviving notebooks does that.
 - Each window drawn as a line plot, converted to a grayscale image, classified by a 2D-CNN or a
   2D-CNN + LSTM.
 - Reported: 2D-CNN accuracy 96.67 % (1–3 min windows); CNN-LSTM "not suited to the data".
+
+Notebooks survive for the 30 s and 3 min windows and the 1-minute time-series blocks; those for
+1, 2, 4, 5 and 10 min do not. The reanalysis re-runs the 3 min window.
 
 ## What the 2026 reanalysis found
 
@@ -47,6 +53,10 @@ program, checks the data, and re-tests the thesis claims.
 The last 45,000 samples of every `nsrdb` record come from after the electrodes were removed:
 flat, quantised noise of about ±0.05 mV with no QRS complexes (`results/cek_jendela.png`,
 `results/cek_ekor_nsrdb.png`). The thesis task was therefore "ECG vs. no ECG".
+
+This holds for every window length in the thesis, not only 3 minutes. The longest, 10 min, is
+150,000 samples, which at 128 Hz is 19.5 min of recording; the shortest no-ECG tail is 63.8 min.
+Every thesis Normal window, at every length, lies inside it.
 
 Other issues found in the code and text:
 
