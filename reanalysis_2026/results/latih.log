@@ -1,0 +1,144 @@
+=== E0 cnn benar
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.0488, 100 s
+lipatan 2/15: galat akhir 0.3074, 210 s
+lipatan 3/15: galat akhir 0.0252, 304 s
+lipatan 4/15: galat akhir 0.0115, 415 s
+lipatan 5/15: galat akhir 0.1376, 513 s
+lipatan 6/15: galat akhir 0.9134, 623 s
+lipatan 7/15: galat akhir 0.1612, 717 s
+lipatan 8/15: galat akhir 0.3637, 828 s
+lipatan 9/15: galat akhir 0.0465, 924 s
+lipatan 10/15: galat akhir 0.1279, 1035 s
+lipatan 11/15: galat akhir 0.3973, 1129 s
+lipatan 12/15: galat akhir 0.0140, 1239 s
+lipatan 13/15: galat akhir 0.0266, 1333 s
+lipatan 14/15: galat akhir 0.5427, 1446 s
+lipatan 15/15: galat akhir 0.2341, 1542 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas
+       1 0.925    0.947          1.00         0.889        NaN       NaN
+       2 0.914    0.921          0.95         0.889        NaN       NaN
+       3 0.897    0.921          1.00         0.833        NaN       NaN
+gabungan 0.900    0.947          1.00         0.889      0.739       1.0
+=== E0 lstm_tesis tesis
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.6952, 85 s
+lipatan 2/15: galat akhir 0.6920, 166 s
+lipatan 3/15: galat akhir 0.6829, 246 s
+lipatan 4/15: galat akhir 0.6902, 330 s
+lipatan 5/15: galat akhir 0.7043, 414 s
+lipatan 6/15: galat akhir 0.6752, 496 s
+lipatan 7/15: galat akhir 0.7047, 578 s
+lipatan 8/15: galat akhir 0.6747, 659 s
+lipatan 9/15: galat akhir 0.6910, 742 s
+lipatan 10/15: galat akhir 0.6865, 826 s
+lipatan 11/15: galat akhir 0.6963, 906 s
+lipatan 12/15: galat akhir 0.6950, 986 s
+lipatan 13/15: galat akhir 0.7034, 1067 s
+lipatan 14/15: galat akhir 0.6886, 1151 s
+lipatan 15/15: galat akhir 0.7153, 1237 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas
+       1 0.528    0.526           0.6         0.444        NaN       NaN
+       2 0.494    0.500           0.8         0.167        NaN       NaN
+       3 0.461    0.474           0.2         0.778        NaN       NaN
+gabungan 0.489    0.474           0.5         0.444      0.302     0.675
+=== E1 cnn benar --chf
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.1005, 106 s
+lipatan 2/15: galat akhir 0.0151, 208 s
+lipatan 3/15: galat akhir 0.0034, 310 s
+lipatan 4/15: galat akhir 0.2032, 416 s
+lipatan 5/15: galat akhir 0.0928, 517 s
+lipatan 6/15: galat akhir 0.0018, 622 s
+lipatan 7/15: galat akhir 0.0765, 724 s
+lipatan 8/15: galat akhir 0.0525, 829 s
+lipatan 9/15: galat akhir 0.0978, 934 s
+lipatan 10/15: galat akhir 0.9015, 1039 s
+lipatan 11/15: galat akhir 0.0104, 1141 s
+lipatan 12/15: galat akhir 0.0976, 1241 s
+lipatan 13/15: galat akhir 0.1504, 1343 s
+lipatan 14/15: galat akhir 0.0980, 1447 s
+lipatan 15/15: galat akhir 0.0857, 1546 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas  chf_dinyatakan_scd  chf_peluang_median  normal_peluang_median  scd_peluang_median
+       1 0.919    0.895           0.9         0.889        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       2 0.925    0.921           0.9         0.944        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       3 0.922    0.895           0.9         0.889        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+gabungan 0.928    0.895           0.9         0.889      0.797       1.0               0.867               0.897                  0.042               0.899
+=== E2 cnn benar
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.2077, 99 s
+lipatan 2/15: galat akhir 0.0117, 212 s
+lipatan 3/15: galat akhir 0.0761, 307 s
+lipatan 4/15: galat akhir 0.1909, 418 s
+lipatan 5/15: galat akhir 0.3417, 515 s
+lipatan 6/15: galat akhir 0.0663, 625 s
+lipatan 7/15: galat akhir 0.1980, 719 s
+lipatan 8/15: galat akhir 0.0668, 831 s
+lipatan 9/15: galat akhir 0.1716, 928 s
+lipatan 10/15: galat akhir 0.7735, 1042 s
+lipatan 11/15: galat akhir 0.3407, 1136 s
+lipatan 12/15: galat akhir 0.1533, 1248 s
+lipatan 13/15: galat akhir 0.0888, 1342 s
+lipatan 14/15: galat akhir 0.4706, 1450 s
+lipatan 15/15: galat akhir 0.2934, 1546 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas
+       1 0.897    0.868          0.90         0.833        NaN       NaN
+       2 0.867    0.868          0.85         0.889        NaN       NaN
+       3 0.889    0.842          0.85         0.833        NaN       NaN
+gabungan 0.897    0.895          0.90         0.889      0.756       1.0
+=== E1 lstm benar --chf
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.6992, 84 s
+lipatan 2/15: galat akhir 0.6623, 165 s
+lipatan 3/15: galat akhir 0.6944, 248 s
+lipatan 4/15: galat akhir 0.6878, 331 s
+lipatan 5/15: galat akhir 0.6820, 415 s
+lipatan 6/15: galat akhir 0.7024, 496 s
+lipatan 7/15: galat akhir 0.6949, 578 s
+lipatan 8/15: galat akhir 0.6972, 660 s
+lipatan 9/15: galat akhir 0.6832, 744 s
+lipatan 10/15: galat akhir 0.7032, 829 s
+lipatan 11/15: galat akhir 0.7643, 909 s
+lipatan 12/15: galat akhir 0.7514, 991 s
+lipatan 13/15: galat akhir 0.6367, 1071 s
+lipatan 14/15: galat akhir 0.7060, 1153 s
+lipatan 15/15: galat akhir 0.6892, 1236 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas  chf_dinyatakan_scd  chf_peluang_median  normal_peluang_median  scd_peluang_median
+       1 0.518    0.526           1.0           0.0        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       2 0.560    0.526           1.0           0.0        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       3 0.525    0.526           1.0           0.0        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+gabungan 0.431    0.526           1.0           0.0      0.236     0.625                 1.0                0.52                  0.522               0.521
+=== E0 lstm benar
+C:\Users\agust\OneDrive\Documents\UNOSO\Riset\EKG\Uji_Tesis\03_latih.py:112: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  return float(loss)
+lipatan 1/15: galat akhir 0.6975, 82 s
+lipatan 2/15: galat akhir 0.6690, 162 s
+lipatan 3/15: galat akhir 0.6958, 242 s
+lipatan 4/15: galat akhir 0.6878, 328 s
+lipatan 5/15: galat akhir 0.6806, 413 s
+lipatan 6/15: galat akhir 0.7049, 498 s
+lipatan 7/15: galat akhir 0.6952, 577 s
+lipatan 8/15: galat akhir 0.6969, 657 s
+lipatan 9/15: galat akhir 0.6829, 738 s
+lipatan 10/15: galat akhir 0.7001, 819 s
+lipatan 11/15: galat akhir 0.7672, 898 s
+lipatan 12/15: galat akhir 0.7622, 977 s
+lipatan 13/15: galat akhir 0.6384, 1057 s
+lipatan 14/15: galat akhir 0.7073, 1140 s
+lipatan 15/15: galat akhir 0.6880, 1226 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas
+       1 0.506    0.526           1.0           0.0        NaN       NaN
+       2 0.529    0.526           1.0           0.0        NaN       NaN
+       3 0.481    0.526           1.0           0.0        NaN       NaN
+gabungan 0.436    0.526           1.0           0.0      0.239      0.62

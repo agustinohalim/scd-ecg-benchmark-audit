@@ -1,0 +1,42 @@
+=== E1 lstm benar --chf --balik
+lipatan 1/15: galat akhir 0.2758, 85 s
+lipatan 2/15: galat akhir 0.0581, 166 s
+lipatan 3/15: galat akhir 0.1298, 249 s
+lipatan 4/15: galat akhir 0.6881, 333 s
+lipatan 5/15: galat akhir 0.1946, 418 s
+lipatan 6/15: galat akhir 0.0648, 499 s
+lipatan 7/15: galat akhir 0.6968, 582 s
+lipatan 8/15: galat akhir 0.1871, 665 s
+lipatan 9/15: galat akhir 0.2779, 750 s
+lipatan 10/15: galat akhir 0.0936, 835 s
+lipatan 11/15: galat akhir 0.6322, 915 s
+lipatan 12/15: galat akhir 0.1552, 997 s
+lipatan 13/15: galat akhir 0.0731, 1080 s
+lipatan 14/15: galat akhir 0.1150, 1167 s
+lipatan 15/15: galat akhir 0.1768, 1253 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas  chf_dinyatakan_scd  chf_peluang_median  normal_peluang_median  scd_peluang_median
+       1 0.889    0.816          0.90         0.722        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       2 0.792    0.711          0.70         0.722        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+       3 0.939    0.895          0.90         0.889        NaN       NaN                 NaN                 NaN                    NaN                 NaN
+gabungan 0.903    0.895          0.85         0.944      0.765       1.0               0.867               0.794                  0.206               0.754
+=== E0 lstm benar --balik
+lipatan 1/15: galat akhir 0.6960, 83 s
+lipatan 2/15: galat akhir 0.3899, 162 s
+lipatan 3/15: galat akhir 0.6952, 244 s
+lipatan 4/15: galat akhir 0.6877, 330 s
+lipatan 5/15: galat akhir 0.1170, 415 s
+lipatan 6/15: galat akhir 0.6953, 500 s
+lipatan 7/15: galat akhir 0.6965, 580 s
+lipatan 8/15: galat akhir 0.6913, 660 s
+lipatan 9/15: galat akhir 0.6833, 743 s
+lipatan 10/15: galat akhir 0.7963, 826 s
+lipatan 11/15: galat akhir 0.7970, 904 s
+lipatan 12/15: galat akhir 0.7513, 985 s
+lipatan 13/15: galat akhir 0.2075, 1065 s
+lipatan 14/15: galat akhir 0.6914, 1148 s
+lipatan 15/15: galat akhir 0.6860, 1229 s
+ ulangan   auc  akurasi  sensitivitas  spesifisitas  auc_bawah  auc_atas
+       1 0.722    0.605           1.0         0.167        NaN       NaN
+       2 0.708    0.579           1.0         0.111        NaN       NaN
+       3 0.747    0.579           1.0         0.111        NaN       NaN
+gabungan 0.794    0.658           1.0         0.278       0.62     0.931
