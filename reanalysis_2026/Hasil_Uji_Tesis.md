@@ -155,3 +155,36 @@ SCD.
 - Jendela Normal E1 diambil di tengah rentang teranotasi, satu per rekaman; jam pengambilan tidak
   dipadankan dengan jendela SCD.
 - Pembalikan citra adalah penyesuaian sesudah melihat hasil (§3.2).
+
+## 6. Enam jendela per pasien (`05_banyak_jendela.py`)
+
+Dijalankan 29 September 2026; rancangan ditetapkan dan dikomit sebelum dijalankan (`a5c431e`).
+Enam jendela 3 menit per pasien, 250 Hz: SCD berakhir 0, 10, 20, 30, 40, 50 menit sebelum VF;
+Normal dan CHF berjarak sama di rentang teranotasi. 2D-CNN, pengaturan "benar", 15 epoch,
+lipatan tingkat pasien 5 x 2. Jendela: 120 SCD, 108 Normal, 90 CHF (hanya dinilai). Keluaran
+`keluaran/hasil_banyak_jendela.csv`, peluang per jendela di `keluaran/banyak_jendela.csv`.
+
+| Ukuran | Nilai |
+|---|---|
+| AUC tingkat jendela | 0,95 |
+| AUC tingkat pasien [95 % bootstrap pasien] | **0,99 [0,97, 1,00]** |
+| Akurasi tingkat pasien (ambang 0,5) | 0,947 |
+
+| Menit sebelum VF | 0 | 10 | 20 | 30 | 40 | 50 |
+|---|---|---|---|---|---|---|
+| AUC (jendela SCD pada horizon itu lawan semua jendela Normal) | 0,97 | 0,92 | 0,95 | 0,98 | 0,91 | 0,96 |
+
+| Peluang SCD median per pasien | |
+|---|---|
+| SCD | 0,79 |
+| Normal | 0,10 |
+| **CHF (gagal jantung, hidup)** | **0,83** |
+| CHF dinyatakan SCD | **14 dari 15 (93 %)** |
+
+Dengan enam kali lebih banyak data, selangnya menyempit (0,97–1,00) dan arahnya sama dengan
+§3.3: tidak ada penurunan dari 0 ke 50 menit sebelum VF, dan pasien gagal jantung yang hidup
+mendapat peluang SCD **lebih tinggi** daripada pasien SCD sendiri. Model memisahkan pasien jantung
+dari relawan sehat dengan sangat baik; ia tidak mengenali henti jantung yang mendekat.
+
+⚠️ Galat batch terakhir lipatan 5–8 tinggi (0,63–0,83): sebagian model mungkin belum konvergen dalam 15 epoch.
+Angka di atas adalah rerata atas model-model itu apa adanya.

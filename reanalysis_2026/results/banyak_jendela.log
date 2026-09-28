@@ -1,0 +1,46 @@
+CHF chf01
+CHF chf02
+CHF chf03
+CHF chf04
+CHF chf05
+CHF chf06
+CHF chf07
+CHF chf08
+CHF chf09
+CHF chf10
+CHF chf11
+CHF chf12
+CHF chf13
+CHF chf14
+CHF chf15
+kelas
+CHF        90
+Normal    108
+SCD       120
+lipatan 1/10: galat akhir 0.0453, 314 s
+lipatan 2/10: galat akhir 0.0115, 618 s
+lipatan 3/10: galat akhir 0.3316, 921 s
+lipatan 4/10: galat akhir 0.0212, 1221 s
+lipatan 5/10: galat akhir 0.7277, 1523 s
+lipatan 6/10: galat akhir 0.6251, 1831 s
+lipatan 7/10: galat akhir 0.8253, 2134 s
+lipatan 8/10: galat akhir 0.8069, 2452 s
+lipatan 9/10: galat akhir 0.0031, 2765 s
+lipatan 10/10: galat akhir 0.1715, 3064 s
+                               ukuran          nilai
+                  AUC tingkat jendela       0.948997
+                   AUC tingkat pasien       0.994444
+ AUC tingkat pasien, batas bawah 95 %       0.974432
+  AUC tingkat pasien, batas atas 95 %            1.0
+  Akurasi tingkat pasien (ambang 0,5)       0.947368
+       AUC horizon 0 menit sebelum VF       0.968519
+      AUC horizon 10 menit sebelum VF       0.922222
+      AUC horizon 20 menit sebelum VF           0.95
+      AUC horizon 30 menit sebelum VF       0.981944
+      AUC horizon 40 menit sebelum VF       0.912037
+      AUC horizon 50 menit sebelum VF       0.959259
+  CHF: proporsi pasien dinyatakan SCD       0.933333
+   CHF: peluang SCD median per pasien       0.834121
+Normal: peluang SCD median per pasien       0.098291
+   SCD: peluang SCD median per pasien       0.792892
+           jendela SCD / Normal / CHF 120 / 108 / 90

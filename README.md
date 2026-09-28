@@ -102,9 +102,22 @@ separate row.
 
 ### Multi-window retest
 
-`05_banyak_jendela.py` uses six 3-minute windows per patient instead of one (SCD windows ending
-0–50 min before VF; Normal and CHF windows spread over the annotated recording), still split by
-patient. Results: see `Hasil_Uji_Tesis.md` §6 once the run completes.
+`05_banyak_jendela.py` uses six 3-minute windows per patient instead of one: SCD windows ending
+0, 10, 20, 30, 40 and 50 min before VF; Normal and CHF windows spread over the annotated
+recording. 2D-CNN, patient-level 5-fold × 2 repeats; 120 SCD, 108 Normal and 90 CHF windows. The
+design was committed before the run.
+
+| Measure | Value |
+|---|---|
+| Patient-level AUC [95 % CI] | **0.99 [0.97, 1.00]** |
+| AUC by minutes before VF: 0 / 10 / 20 / 30 / 40 / 50 | 0.97 / 0.92 / 0.95 / 0.98 / 0.91 / 0.96 |
+| Median SCD probability per patient: SCD / Normal / **CHF** | 0.79 / 0.10 / **0.83** |
+| Living heart-failure patients classified as SCD | **14 of 15** |
+
+More data narrows the interval and leaves the conclusion unchanged: no decline over the 50
+minutes before VF, and living heart-failure patients score higher than the patients who had SCD.
+The final-batch loss of four of the ten fold models stayed high (0.63–0.83), so some may not have
+fully converged in 15 epochs.
 
 ## Reproduce
 

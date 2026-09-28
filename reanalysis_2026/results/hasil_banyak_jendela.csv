@@ -1,0 +1,17 @@
+ukuran,nilai
+AUC tingkat jendela,0.9489969135802468
+AUC tingkat pasien,0.9944444444444444
+"AUC tingkat pasien, batas bawah 95 %",0.9744318181818181
+"AUC tingkat pasien, batas atas 95 %",1.0
+"Akurasi tingkat pasien (ambang 0,5)",0.9473684210526315
+AUC horizon 0 menit sebelum VF,0.9685185185185186
+AUC horizon 10 menit sebelum VF,0.9222222222222222
+AUC horizon 20 menit sebelum VF,0.95
+AUC horizon 30 menit sebelum VF,0.9819444444444444
+AUC horizon 40 menit sebelum VF,0.912037037037037
+AUC horizon 50 menit sebelum VF,0.9592592592592593
+CHF: proporsi pasien dinyatakan SCD,0.9333333333333333
+CHF: peluang SCD median per pasien,0.83412104845047
+Normal: peluang SCD median per pasien,0.098291068978142
+SCD: peluang SCD median per pasien,0.7928921272978187
+jendela SCD / Normal / CHF,120 / 108 / 90
