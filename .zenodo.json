@@ -1,0 +1,10 @@
+{
+  "title": "scd-ecg-benchmark-audit: reanalysis of a 2D-CNN/LSTM ECG classifier for sudden cardiac death (MIT-BIH SDDB vs NSRDB)",
+  "upload_type": "software",
+  "description": "Original 2022 code of the master's thesis and the IJISAE 2023 article by Halim and Isa, and the author's 2026 reanalysis. The Normal class of the original work was taken from the electrode-off tail of the nsrdb records and contains no heartbeats, so the reported accuracies measure 'ECG versus no ECG'. With corrected data the models separate cardiac patients from healthy volunteers but do not detect approaching sudden cardiac death. PhysioNet data are not included.",
+  "creators": [
+    {"name": "Halim, Agustino", "orcid": "0009-0008-4388-1174", "affiliation": "Universitas OSO"}
+  ],
+  "license": "MIT",
+  "keywords": ["ECG", "sudden cardiac death", "PhysioNet", "deep learning", "shortcut learning", "reproducibility", "benchmark audit"]
+}
