@@ -1,5 +1,7 @@
 # SCD ECG benchmark audit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23033975.svg)](https://doi.org/10.5281/zenodo.23033975)
+
 A master's thesis on ECG-based sudden cardiac death (SCD) classification, re-examined by its
 author.
 
@@ -158,6 +160,14 @@ e215–e220.
 Code and text in this repository are released under the MIT License (`LICENSE`).
 
 ## Citation
+
+To cite this repository (all versions):
+
+Halim, A. (2026). *scd-ecg-benchmark-audit: reanalysis of a 2D-CNN/LSTM ECG classifier for
+sudden cardiac death (MIT-BIH SDDB vs NSRDB)* [Software]. Zenodo.
+https://doi.org/10.5281/zenodo.23033975
+
+The original thesis:
 
 Halim, A. (2022). *Klasifikasi sinyal elektrokardiogram untuk mendiagnosa sudden cardiac death
 menggunakan 2D CNN dan LSTM* [Master's thesis, Universitas Bina Nusantara].
