@@ -188,3 +188,21 @@ dari relawan sehat dengan sangat baik; ia tidak mengenali henti jantung yang men
 
 ⚠️ Galat batch terakhir lipatan 5–8 tinggi (0,63–0,83): sebagian model mungkin belum konvergen dalam 15 epoch.
 Angka di atas adalah rerata atas model-model itu apa adanya.
+
+## 7. Kontrol pita frekuensi (`06_kontrol_pita.py`, 29 September 2026)
+
+Pertanyaan: di E1, Normal berasal dari `nsrdb` 128 Hz yang diubah ke 250 Hz (isi frekuensi
+≤ 64 Hz), sedangkan SCD dan CHF direkam 250 Hz (≤ 125 Hz). Citra jejak bisa membawa beda itu, jadi
+"CHF dinyatakan SCD" mungkin berarti "tidak diubah frekuensinya", bukan "pasien jantung". Uji
+CHF di `Uji_CHF/` tidak menjawab ini karena memakai ciri HRV, bukan citra gelombang.
+
+Kontrol: SCD dan CHF dilewatkan 250 → 128 → 250 Hz, jalur yang sama dengan Normal. Citra Normal E1
+tidak berubah. 2D-CNN, pengaturan "benar", lipatan, benih, dan epoch sama dengan §3.3.
+
+| E1, 2D-CNN | AUC [95 %] | Akurasi | Sens. | Spes. | CHF dinyatakan SCD | Peluang SCD median CHF / SCD / Normal |
+|---|---|---|---|---|---|---|
+| Asli (§3.3) | 0,93 [0,80, 1,00] | 0,895 | 0,90 | 0,889 | 13 dari 15 | 0,90 / 0,90 / 0,04 |
+| Pita disamakan | 0,92 [0,80, 1,00] | 0,921 | 0,95 | 0,889 | 13 dari 15 | 0,89 / 0,93 / 0,06 |
+
+Pita frekuensi **bukan** jalan pintas model. Tafsiran §3.3 tetap. Beda lain antarbasis data
+(alat perekam, sadapan, rumah sakit) belum dikendalikan; §5 tetap berlaku.

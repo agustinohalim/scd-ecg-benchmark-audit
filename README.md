@@ -121,6 +121,21 @@ minutes before VF, and living heart-failure patients score higher than the patie
 The final-batch loss of four of the ten fold models stayed high (0.63–0.83), so some may not have
 fully converged in 15 epochs.
 
+### Bandwidth control
+
+In E1 the Normal windows are 128 Hz recordings resampled to 250 Hz (content up to 64 Hz), while
+SCD and CHF are recorded at 250 Hz (up to 125 Hz). A waveform image could carry that difference.
+`06_kontrol_pita.py` passes SCD and CHF through the same 250 → 128 → 250 Hz path as Normal and
+retrains the 2D-CNN with the same folds, seed and epochs.
+
+| E1, 2D-CNN | AUC [95 % CI] | Living CHF classified as SCD |
+|---|---|---|
+| Original | 0.93 [0.80, 1.00] | 13 of 15 |
+| Bandwidth matched | 0.92 [0.80, 1.00] | 13 of 15 |
+
+Sampling bandwidth is not the shortcut. Other differences between the source databases (recorder,
+lead, hospital) remain uncontrolled.
+
 ## Reproduce
 
 Python 3.12 with `wfdb`, `numpy`, `pandas`, `scipy`, `scikit-learn`, `matplotlib`, `Pillow`,
@@ -135,6 +150,7 @@ python 04_garis_dasar.py           # one-feature baseline
 python 03_latih.py E1 cnn benar --chf
 python 03_latih.py E1 lstm benar --chf --balik
 python 05_banyak_jendela.py        # six windows per patient
+python 06_kontrol_pita.py          # bandwidth control (streams SCD/CHF windows from PhysioNet)
 ```
 
 Set `THESIS_DATA` to use data stored elsewhere. Scripts write to `keluaran/`; the committed
