@@ -17,7 +17,8 @@ program, checks the data, and re-tests the thesis claims.
 > **Read this first.** The reanalysis shows that the 2022 results do not measure what the thesis
 > says they measure. The "Normal" class in the thesis contains no heartbeats (see below). Do not
 > cite the 2022 accuracy (96.67 %) as evidence that ECG images can diagnose or predict sudden
-> cardiac death.
+> cardiac death. The published article is corrected in
+> [10.5281/zenodo.23034462](https://doi.org/10.5281/zenodo.23034462).
 
 ## Repository layout
 
@@ -192,3 +193,8 @@ The thesis results were also published as Halim, A., & Isa, S. M. (2023). Electr
 signal classification for diagnosis sudden cardiac death using 2D CNN and LSTM. *International
 Journal of Intelligent Systems and Applications in Engineering*, 11(4s), 558–564. The reanalysis
 above applies to those results as well.
+
+The first author's correction to that article:
+
+Halim, A. (2026). *Correction to: Electrocardiogram signal classification for diagnosis sudden
+cardiac death using 2D CNN and LSTM*. Zenodo. https://doi.org/10.5281/zenodo.23034462
